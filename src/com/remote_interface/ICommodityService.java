@@ -8,7 +8,7 @@ import com.model.Commodity;
 import com.model.CommodityCategory;
 
 public interface ICommodityService extends Remote{
-	/**添加分类*/
+	/**添加分类*/ 
 	public void addCommodityCategory(String name,CommodityCategory fathercc)throws RemoteException;
 	/**删除分类*/
 	public void delCommodityCategory(CommodityCategory cc)throws RemoteException;
