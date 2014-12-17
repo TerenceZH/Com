@@ -23,4 +23,6 @@ public interface IUserSerivce extends Remote{
 	public boolean isExist(String name)throws RemoteException;
 	
 	public void confirm(String id) throws RemoteException;
+	
+	public String getMessage(String id) throws RemoteException;
 }
