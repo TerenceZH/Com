@@ -4,16 +4,11 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 
-public class CommonFunc { 
+public class CommonFunc {
 	/**
-	 * 商品分类id转换为长度为3的字符串
-	 * @param id
+	 * 获取现在时间的字符串形式
 	 * @return
 	 */
-	public static String categoryidToString(int id){
-		return id<10?"00"+id:(id<100?"0"+id:""+id);
-	}
-
 	public static String time(){
 		SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 		return format.format(new Date());
