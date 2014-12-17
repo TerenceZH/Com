@@ -24,5 +24,11 @@ public interface IUserSerivce extends Remote{
 	
 	public void confirm(String id) throws RemoteException;
 	
+	/**
+	 * hello
+	 * @param id
+	 * @return
+	 * @throws RemoteException
+	 */
 	public String getMessage(String id) throws RemoteException;
 }
