@@ -3,15 +3,19 @@ package com.model;
 import java.io.Serializable;
 
 public class Message implements Serializable{
-	private Users from;
-	private Users to;
+	private int id;
+	private User from;
+	private User to;
 	private String text;
 	private String time;
 	private int isRead;
-	
 
-	public Message(Users from, Users to, String text, String time, int isRead) {
+
+
+	public Message(int id, User from, User to, String text, String time,
+			int isRead) {
 		super();
+		this.id = id;
 		this.from = from;
 		this.to = to;
 		this.text = text;
@@ -20,24 +24,41 @@ public class Message implements Serializable{
 	}
 
 
-	public Users getFrom() {
+
+	public int getId() {
+		return id;
+	}
+
+
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+
+
+	public User getFrom() {
 		return from;
 	}
 
 
-	public void setFrom(Users from) {
+
+	public void setFrom(User from) {
 		this.from = from;
 	}
 
 
-	public Users getTo() {
+
+	public User getTo() {
 		return to;
 	}
 
 
-	public void setTo(Users to) {
+
+	public void setTo(User to) {
 		this.to = to;
 	}
+
 
 
 	public String getText() {
@@ -45,9 +66,11 @@ public class Message implements Serializable{
 	}
 
 
+
 	public void setText(String text) {
 		this.text = text;
 	}
+
 
 
 	public String getTime() {
@@ -55,9 +78,11 @@ public class Message implements Serializable{
 	}
 
 
+
 	public void setTime(String time) {
 		this.time = time;
 	}
+
 
 
 	public int getIsRead() {
@@ -65,9 +90,12 @@ public class Message implements Serializable{
 	}
 
 
+
 	public void setIsRead(int isRead) {
 		this.isRead = isRead;
 	}
+
+
 	
 	
 	

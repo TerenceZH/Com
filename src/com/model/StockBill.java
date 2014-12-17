@@ -4,8 +4,8 @@ import java.io.Serializable;
 
 public class StockBill implements Serializable{
 	private String id;
-	private int type;//=0 if more than sth,=1 if less than sth,=2 if less than warning num ,=3 when a giving bill is created
-	private int quantity;//=0 when type=2
+	private int type;
+	private int quantity;
 	private String time;
 	private int isApproved;
 

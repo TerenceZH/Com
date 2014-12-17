@@ -3,27 +3,27 @@ package com.model;
 import java.io.Serializable;
 
 public class CommodityCategory implements Serializable{
-	private int node_id;//start from 1
+	private String no;//000-999
 	private String name;
-	private int parent_id;//=0 if toppest
+	private String parentNo;//×î¶¥²ãµÄÎª000  
 
 	public CommodityCategory() {
 		// TODO Auto-generated constructor stub
 	}
 
-	public CommodityCategory(int node_id, String name, int parent_id) {
+	public CommodityCategory(String no, String name, String parentNo) {
 		super();
-		this.node_id = node_id;
+		this.no = no;
 		this.name = name;
-		this.parent_id = parent_id;
+		this.parentNo = parentNo;
 	}
 
-	public int getNode_id() {
-		return node_id;
+	public String getNo() {
+		return no;
 	}
 
-	public void setNode_id(int node_id) {
-		this.node_id = node_id;
+	public void setNo(String no) {
+		this.no = no;
 	}
 
 	public String getName() {
@@ -34,13 +34,15 @@ public class CommodityCategory implements Serializable{
 		this.name = name;
 	}
 
-	public int getParent_id() {
-		return parent_id;
+	public String getParentNo() {
+		return parentNo;
 	}
 
-	public void setParent_id(int parent_id) {
-		this.parent_id = parent_id;
+	public void setParentNo(String parentNo) {
+		this.parentNo = parentNo;
 	}
+
+	
 
 	
 }

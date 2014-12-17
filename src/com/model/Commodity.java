@@ -3,48 +3,45 @@ package com.model;
 import java.io.Serializable;
 
 public class Commodity implements Serializable{
-	private String id;
+	private String no;
 	private String name;
 	private String style;
-	private int stockQuantity;
+	private String category;
+	private int quantity;
 	private double inPrice;
-	private double salePrice;
+	private double outPrice;
 	private double lastInPrice;
-	private double lastSalePrice;
+	private double lastOutPrice;
 	private double stockAvgPrice;
 	private int warningQuantity;
-	private String time;
-	private int categoryId;
 
 	public Commodity() {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Commodity(String id, String name, String style, int stockQuantity,
-			double inPrice, double salePrice, double lastInPrice,
-			double lastSalePrice, double stockAvgPrice, int warningQuantity,
-			String time, int categoryId) {
+	public Commodity(String no, String name, String style, String category,
+			int quantity, double inPrice, double outPrice, double lastInPrice,
+			double lastOutPrice, double stockAvgPrice, int warningQuantity) {
 		super();
-		this.id = id;
+		this.no = no;
 		this.name = name;
 		this.style = style;
-		this.stockQuantity = stockQuantity;
+		this.category = category;
+		this.quantity = quantity;
 		this.inPrice = inPrice;
-		this.salePrice = salePrice;
+		this.outPrice = outPrice;
 		this.lastInPrice = lastInPrice;
-		this.lastSalePrice = lastSalePrice;
+		this.lastOutPrice = lastOutPrice;
 		this.stockAvgPrice = stockAvgPrice;
 		this.warningQuantity = warningQuantity;
-		this.time = time;
-		this.categoryId = categoryId;
 	}
 
-	public String getId() {
-		return id;
+	public String getNo() {
+		return no;
 	}
 
-	public void setId(String id) {
-		this.id = id;
+	public void setNo(String no) {
+		this.no = no;
 	}
 
 	public String getName() {
@@ -63,12 +60,20 @@ public class Commodity implements Serializable{
 		this.style = style;
 	}
 
-	public int getStockQuantity() {
-		return stockQuantity;
+	public String getCategory() {
+		return category;
 	}
 
-	public void setStockQuantity(int stockQuantity) {
-		this.stockQuantity = stockQuantity;
+	public void setCategory(String category) {
+		this.category = category;
+	}
+
+	public int getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
 	}
 
 	public double getInPrice() {
@@ -79,12 +84,12 @@ public class Commodity implements Serializable{
 		this.inPrice = inPrice;
 	}
 
-	public double getSalePrice() {
-		return salePrice;
+	public double getOutPrice() {
+		return outPrice;
 	}
 
-	public void setSalePrice(double salePrice) {
-		this.salePrice = salePrice;
+	public void setOutPrice(double outPrice) {
+		this.outPrice = outPrice;
 	}
 
 	public double getLastInPrice() {
@@ -95,12 +100,12 @@ public class Commodity implements Serializable{
 		this.lastInPrice = lastInPrice;
 	}
 
-	public double getLastSalePrice() {
-		return lastSalePrice;
+	public double getLastOutPrice() {
+		return lastOutPrice;
 	}
 
-	public void setLastSalePrice(double lastSalePrice) {
-		this.lastSalePrice = lastSalePrice;
+	public void setLastOutPrice(double lastOutPrice) {
+		this.lastOutPrice = lastOutPrice;
 	}
 
 	public double getStockAvgPrice() {
@@ -119,21 +124,6 @@ public class Commodity implements Serializable{
 		this.warningQuantity = warningQuantity;
 	}
 
-	public String getTime() {
-		return time;
-	}
-
-	public void setTime(String time) {
-		this.time = time;
-	}
-
-	public int getCategoryId() {
-		return categoryId;
-	}
-
-	public void setCategoryId(int categoryId) {
-		this.categoryId = categoryId;
-	}
-
+	
 	
 }

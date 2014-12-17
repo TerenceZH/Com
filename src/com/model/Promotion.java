@@ -3,33 +3,42 @@ package com.model;
 import java.io.Serializable;
 
 public class Promotion implements Serializable{
-	String startTime,endTime;
+	private String id;
+	private String tablename;
 	
 	public Promotion(){
 		
 	}
 
-	public Promotion(String startTime, String endTime) {
+	
+	public Promotion(String id, String tablename) {
 		super();
-		this.startTime = startTime;
-		this.endTime = endTime;
+		this.id = id;
+		this.tablename = tablename;
 	}
 
-	public String getStartTime() {
-		return startTime;
+
+	public String getId() {
+		return id;
 	}
 
-	public void setStartTime(String startTime) {
-		this.startTime = startTime;
+
+	public void setId(String id) {
+		this.id = id;
 	}
 
-	public String getEndTime() {
-		return endTime;
+
+	public String getTablename() {
+		return tablename;
 	}
 
-	public void setEndTime(String endTime) {
-		this.endTime = endTime;
+
+	public void setTablename(String tablename) {
+		this.tablename = tablename;
 	}
+
+
+	
 	
 	
 

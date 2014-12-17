@@ -2,16 +2,16 @@ package com.model;
 
 import java.io.Serializable;
 
-public class Users implements Serializable{
+public class User implements Serializable{
 	private String username;
 	private String password;
-	private Power type;
+	private int type;
 
-	public Users() {
+	public User() {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Users(String username, String password, Power type) {
+	public User(String username, String password, int type) {
 		super();
 		this.username = username;
 		this.password = password;
@@ -34,11 +34,11 @@ public class Users implements Serializable{
 		this.password = password;
 	}
 
-	public Power getType() {
+	public int getType() {
 		return type;
 	}
 
-	public void setType(Power type) {
+	public void setType(int type) {
 		this.type = type;
 	}
 	

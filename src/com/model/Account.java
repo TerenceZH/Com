@@ -3,6 +3,7 @@ package com.model;
 import java.io.Serializable;
 
 public class Account implements Serializable{
+	private String id;
 	private String name;
 	private double money;
 
@@ -10,11 +11,25 @@ public class Account implements Serializable{
 		// TODO Auto-generated constructor stub
 	}
 
-	public Account(String name, double money) {
+	
+	public Account(String id, String name, double money) {
 		super();
+		this.id = id;
 		this.name = name;
 		this.money = money;
 	}
+	
+	
+
+	public String getId() {
+		return id;
+	}
+
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
 
 	public String getName() {
 		return name;

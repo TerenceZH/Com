@@ -1,65 +1,90 @@
 package com.model;
 
-import java.util.ArrayList;
+import java.io.Serializable;
 
-public class AccountBill {
+
+public class AccountBill implements Serializable{
 	
-	private String id;
-	private String operator;
-	private ArrayList<String> idList;
-	private String time;
+	private String no;
+	private int type;
+	private String customerNo;
+	private String operatorNo;
 	private double total;
+	private String time;
 	private int isApproved;
 	
 	public AccountBill(){}
-	
-	public AccountBill(String id, String operator, ArrayList<String> idList,
-			String time, double total, int isApproved) {
+
+	public AccountBill(String no, int type, String customerNo,
+			String operatorNo, double total, String time, int isApproved) {
 		super();
-		this.id = id;
-		this.operator = operator;
-		this.idList = idList;
-		this.time = time;
+		this.no = no;
+		this.type = type;
+		this.customerNo = customerNo;
+		this.operatorNo = operatorNo;
 		this.total = total;
+		this.time = time;
 		this.isApproved = isApproved;
 	}
-	
-	public String getId() {
-		return id;
+
+	public String getNo() {
+		return no;
 	}
-	public void setId(String id) {
-		this.id = id;
+
+	public void setNo(String no) {
+		this.no = no;
 	}
-	public String getOperator() {
-		return operator;
+
+	public int getType() {
+		return type;
 	}
-	public void setOperator(String operator) {
-		this.operator = operator;
+
+	public void setType(int type) {
+		this.type = type;
 	}
-	public ArrayList<String> getIdList() {
-		return idList;
+
+	public String getCustomerNo() {
+		return customerNo;
 	}
-	public void setIdList(ArrayList<String> idList) {
-		this.idList = idList;
+
+	public void setCustomerNo(String customerNo) {
+		this.customerNo = customerNo;
 	}
-	public String getTime() {
-		return time;
+
+	public String getOperatorNo() {
+		return operatorNo;
 	}
-	public void setTime(String time) {
-		this.time = time;
+
+	public void setOperatorNo(String operatorNo) {
+		this.operatorNo = operatorNo;
 	}
+
 	public double getTotal() {
 		return total;
 	}
+
 	public void setTotal(double total) {
 		this.total = total;
 	}
+
+	public String getTime() {
+		return time;
+	}
+
+	public void setTime(String time) {
+		this.time = time;
+	}
+
 	public int getIsApproved() {
 		return isApproved;
 	}
+
 	public void setIsApproved(int isApproved) {
 		this.isApproved = isApproved;
 	}
+	
+	
+	
 	
 	
 
