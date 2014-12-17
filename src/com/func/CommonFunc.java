@@ -4,7 +4,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 
-public class CommonFunc {
+public class CommonFunc { 
 	/**
 	 * 商品分类id转换为长度为3的字符串
 	 * @param id
