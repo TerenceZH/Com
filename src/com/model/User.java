@@ -5,8 +5,8 @@ import java.io.Serializable;
 public class User implements Serializable{
 	private String username;
 	private String password;
-	private int type;
-	private int getTopAuthority;
+	private int type;//0=系统管理员 1=库存管理员 2=进销人员 3=财务人员 4=总经理
+	private int getTopAuthority;//获得最高权限 ?1:0
 
 	public User() {
 		// TODO Auto-generated constructor stub

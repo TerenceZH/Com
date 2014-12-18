@@ -2,6 +2,9 @@ package com.model;
 
 import java.io.Serializable;
 
+import javax.swing.JButton;
+
+
 public class Message implements Serializable{
 	private int id;
 	private User from;
@@ -96,6 +99,23 @@ public class Message implements Serializable{
 	}
 
 
+	
+	public Object getMessageValue(int columnNumber){
+		switch (columnNumber){
+		case 0:
+			return getFrom();
+		case 1:
+			return getTime();
+		case 2:
+//			return new JButton("ÏêÇé");
+			return getText();
+		case 3:
+			return new JButton("É¾³ı");
+		default:
+			return "";
+		}
+	
+	}
 	
 	
 	
