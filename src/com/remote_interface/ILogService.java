@@ -7,10 +7,34 @@ import java.util.ArrayList;
 import com.model.Log;
 
 public interface ILogService extends Remote{
-	/**生成log*/
-	public void addLog(Log log)throws RemoteException;
-	/**查找log*/
-	public ArrayList<Log> queryAllLogs()throws RemoteException;
-	public ArrayList<Log> queryByTime(String t1,String t2)throws RemoteException;
-
+	/**
+	 * 查找日志  前台已经处理过异常  所有时间string 格式 yyyy-MM-dd
+	 * @param startTime
+	 * @param endTime
+	 * @param type  
+	 * @return 不存在返回 空array
+	 * @throws RemoteException
+	 */
+	public ArrayList<Log> queryLog(String startTime,String endTime,String type)throws RemoteException;
+	/**
+	 * 查找日志  前台已经处理过异常
+	 * @param type
+	 * @return
+	 * @throws RemoteException
+	 */
+	public ArrayList<Log> queryLog(String type)throws RemoteException;
+	/**
+	 * 查找日志  前台已经处理过异常
+	 * @param startTime
+	 * @param endTime
+	 * @return
+	 * @throws RemoteException
+	 */
+	public ArrayList<Log> queryLog(String startTime,String endTime)throws RemoteException;
+	/**
+	 * 
+	 * @return
+	 * @throws RemoteException
+	 */
+	public ArrayList<Log> queryLog() throws RemoteException;
 }

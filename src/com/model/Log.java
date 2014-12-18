@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 public class Log implements Serializable{
 	private String id;
-	private String type;
+	private String type;//types = {"商品","商品分类","客户","账户","进销","收付款","促销","用户"};
 	private String desc;
 	private String time;
 
@@ -75,9 +75,11 @@ public class Log implements Serializable{
 	public Object getLogValue(int columnNumber){
 		switch (columnNumber){
 			case 0:
-				return getDesc();
+				return getType();
 			case 1:
 				return getTime();
+			case 2:
+				return getDesc();
 			default:
 				return "";
 		}

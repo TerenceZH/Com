@@ -7,8 +7,7 @@ import java.util.ArrayList;
 import com.model.Message;
 import com.model.User;
 
-public interface IUserSerivce extends Remote{
-
+public interface IUserService extends Remote{
 	/**
 	 * 登陆判断是否匹配
 	 * @param username
@@ -32,7 +31,7 @@ public interface IUserSerivce extends Remote{
 	 * @param auth
 	 * @throws RemoteException
 	 */
-	public void addUser(String name,String pwd,int type,int auth)throws RemoteException;
+	public void addUser(String name,String pwd,int type,int auth,String operator)throws RemoteException;
 	/**
 	 * 获得用户信息;用户是否存在;
 	 * @param name
@@ -46,7 +45,7 @@ public interface IUserSerivce extends Remote{
 	 * @param auth
 	 * @throws RemoteException
 	 */
-	public void modUser(String name,int auth)throws RemoteException;
+	public void modUser(String name,int auth,String operator)throws RemoteException;
 	/**
 	 * 获取消息
 	 * @param user
@@ -55,4 +54,5 @@ public interface IUserSerivce extends Remote{
 	 * @throws RemoteException
 	 */
 	public ArrayList<Message> getMessage(User user,int type) throws RemoteException;
+
 }

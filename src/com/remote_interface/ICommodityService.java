@@ -8,6 +8,46 @@ import com.model.Commodity;
 import com.model.CommodityCategory;
 
 public interface ICommodityService extends Remote{
+	/**
+	 * 根据父节点查找类别
+	 * @param no
+	 * @return
+	 * @throws RemoteException
+	 */
+	public ArrayList<CommodityCategory> queryCategoryByParentNo(String no)throws RemoteException;
+	/**
+	 * 添加分类  自动生成编号  分类下有商品不能再添加子分类
+	 * @param name  不能重复 dialog
+	 * @param parentNo 
+	 * @throws RemoteException
+	 */
+	public void addCommodityCategory(String name,String parentNo,String operator)throws RemoteException;
+	/**
+	 * 根据编号获得分类
+	 * @param no 
+	 * @return 不存在返回null
+	 * @throws RemoteException
+	 */
+	public CommodityCategory getCategory(String no)throws RemoteException;
+	/**
+	 * 修改分类
+	 * @param name
+	 * @param no
+	 * @return
+	 * @throws RemoteException
+	 */
+	public void modCommodityCategory(String name,String no,String operator)throws RemoteException;
+	/**
+	 * 删除分类  分类下有子分类或者商品不能删除
+	 * @param no
+	 * @throws RemoteException
+	 */
+	public void delCommdoityCategory(String no,String operator)throws RemoteException;
+	
+	
+	
+	
+	
 	/**添加分类*/ 
 	public void addCommodityCategory(String name,CommodityCategory fathercc)throws RemoteException;
 	/**删除分类*/
