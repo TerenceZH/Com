@@ -43,6 +43,49 @@ public interface ICommodityService extends Remote{
 	 * @throws RemoteException
 	 */
 	public void delCommdoityCategory(String no,String operator)throws RemoteException;
+	/**
+	 * 获取所有可以添加商品分类，该分类下木有子分类
+	 * @return
+	 * @throws RemoteException
+	 */
+	public ArrayList<CommodityCategory> getAllCommodityCategories()throws RemoteException;
+	/**
+	 * 添加商品，编号自动生成 其他默认0
+	 * @param name
+	 * @param style
+	 * @param type  分类的名称，先找到编号、、、
+	 * @param inprice
+	 * @param outprice
+	 * @param warning
+	 * @throws RemoteException
+	 */
+	public void addCommodity(String name,String style,String type,double inprice,double outprice,int warning,String operator)throws RemoteException;
+	/**
+	 * 根据编号来查询  是否存在 
+	 * @param no
+	 * @throws RemoteException
+	 */
+	public Commodity queryCommodity(String no)throws RemoteException;
+	/**
+	 * 可以手动修改的值
+	 * @param no
+	 * @param inprice
+	 * @param outprice
+	 * @param warning
+	 * @throws RemoteException
+	 */
+	public void modCommodity(String no,double inprice,double outprice,int warning,String operator)throws RemoteException;
+	/**
+	 * 删除商品，是否存在
+	 * @param no
+	 * @param operator
+	 * @throws RemoteException
+	 */
+	public void delCommodity(String no,String operator)throws RemoteException;
+	
+	
+	
+	
 	
 	
 	

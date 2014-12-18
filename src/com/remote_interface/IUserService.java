@@ -33,12 +33,12 @@ public interface IUserService extends Remote{
 	 */
 	public void addUser(String name,String pwd,int type,int auth,String operator)throws RemoteException;
 	/**
-	 * 获得用户信息;用户是否存在;
-	 * @param name
+	 * 获得用户信息;id是否存在
+	 * @param id
 	 * @return
 	 * @throws RemoteException
 	 */
-	public User getUser(String name)throws RemoteException;
+	public User getUser(String id)throws RemoteException;
 	/**
 	 * 修改用户最高权限;用户是否存在;dialog
 	 * @param name
