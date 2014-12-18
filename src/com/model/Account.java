@@ -6,20 +6,47 @@ public class Account implements Serializable{
 	private String id;
 	private String name;
 	private double money;
+	private String setTime;
 
 	public Account() {
 		// TODO Auto-generated constructor stub
 	}
 
 	
-	public Account(String id, String name, double money) {
+	
+	
+	
+
+	public Account(String id, String name, double money, String setTime) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.money = money;
+		this.setTime = setTime;
 	}
-	
-	
+
+
+
+
+
+
+	public String getSetTime() {
+		return setTime;
+	}
+
+
+
+
+
+
+	public void setSetTime(String setTime) {
+		this.setTime = setTime;
+	}
+
+
+
+
+
 
 	public String getId() {
 		return id;

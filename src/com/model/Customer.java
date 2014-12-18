@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 public class Customer implements Serializable{
 	private String no;
-	private int type;
+	private int type;//type==0?进货商:销售商
 	private int level;//level 1-5 need pts 1,200,2000,10000,80000
 	private int point;//1 yuan =1 pt,单次结算四舍五入
 	private String name;
