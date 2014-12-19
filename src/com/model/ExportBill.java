@@ -11,6 +11,7 @@ public class ExportBill implements Serializable{
 	private double preTotal;
 	private double discount;
 	private double djq;
+	private double postTotal;
 	private String desc;
 	private String time;
 	private int isApproved;
@@ -20,10 +21,12 @@ public class ExportBill implements Serializable{
 		// TODO Auto-generated constructor stub
 	}
 
+	
+
 	public ExportBill(String no, String customerNo, String businessNo,
 			String warehouseNo, String operatorNo, double preTotal,
-			double discount, double djq, String desc, String time,
-			int isApproved, int type) {
+			double discount, double djq, double postTotal, String desc,
+			String time, int isApproved, int type) {
 		super();
 		this.no = no;
 		this.customerNo = customerNo;
@@ -33,11 +36,26 @@ public class ExportBill implements Serializable{
 		this.preTotal = preTotal;
 		this.discount = discount;
 		this.djq = djq;
+		this.postTotal = postTotal;
 		this.desc = desc;
 		this.time = time;
 		this.isApproved = isApproved;
 		this.type = type;
 	}
+
+
+
+	public double getPostTotal() {
+		return postTotal;
+	}
+
+
+
+	public void setPostTotal(double postTotal) {
+		this.postTotal = postTotal;
+	}
+
+
 
 	public String getNo() {
 		return no;

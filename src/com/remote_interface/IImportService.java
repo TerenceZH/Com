@@ -10,7 +10,7 @@ import com.model.PortBillItem;
 
 public interface IImportService extends Remote{
 	/**
-	 * 进货单  编号自动生成  dialog  type=0进货 1退货
+	 * 进货单  编号自动生成  dialog  type=0进货 1退货  arraylist<string>s 商品编号，单价，数量，总价 ，desc 的格式
 	 * @param customer
 	 * @param warehouse
 	 * @param operator 
